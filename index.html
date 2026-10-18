@@ -17,11 +17,11 @@
       --ink: #3c3333;
       --line: 3px solid var(--mauve);
     }
- 
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
- 
+
     body {
       margin: 0;
       background: var(--cream);
@@ -29,13 +29,13 @@
       font-family: "Coming Soon", cursive;
       line-height: 1.6;
     }
- 
+
     img { max-width: 100%; height: auto; display: block; }
     a { color: var(--mauve); }
     a:focus-visible, .pill:focus-visible { outline: 3px solid var(--mauve); outline-offset: 3px; }
- 
+
     section { width: 90%; max-width: 1100px; margin: 0 auto; padding: 40px 0; }
- 
+
     h1, h2, h3 { margin: 0; }
     h2 {
       font-family: "Margarine", sans-serif;
@@ -46,7 +46,7 @@
     }
     h3 { font-size: 1.1rem; color: var(--ink); }
     p { margin: 0; }
- 
+
     /* Top nav */
     nav {
       display: flex;
@@ -66,11 +66,11 @@
       transition: background .2s;
     }
     .pill:hover { background: var(--pink); }
- 
+
     /* Hero */
     .hero { padding-top: 10px; }
     .hero img { margin: 0 auto; }
- 
+
     /* About */
     .bio {
       display: flex;
@@ -82,7 +82,7 @@
     .bio img { width: 100%; max-width: 380px; }
     /* white image backgrounds blend into the cream page */
     .hero img, .softwares img { mix-blend-mode: multiply; }
- 
+
     .greeting {
       font-family: "Hachi Maru Pop", cursive;
       -webkit-text-stroke: 2px var(--mauve);
@@ -91,7 +91,7 @@
       font-weight: 400;
       margin-bottom: 16px;
     }
- 
+
     /* Two-column resume layout */
     .resume {
       display: grid;
@@ -99,13 +99,13 @@
       gap: 60px;
       align-items: start;
     }
- 
+
     .entry { margin-bottom: 28px; }
     .entry ul { margin: 8px 0 14px; padding-left: 20px; }
     .entry li { margin-bottom: 6px; }
     .role { font-weight: 700; }
     .org { color: var(--mauve); }
- 
+
     .dates {
       display: inline-block;
       background: var(--sage);
@@ -114,7 +114,7 @@
       padding: 4px 20px;
       font-size: .95rem;
     }
- 
+
     /* Skills */
     .skill-list { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
     .skill {
@@ -123,26 +123,29 @@
       border-radius: 999px;
       padding: 6px 20px;
     }
- 
+
     .softwares {
       border: var(--line);
       border-radius: 50px;
       padding: 24px;
     }
- 
+
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    @media (max-width: 800px) { .exp-grid { grid-template-columns: 1fr; gap: 0; } }
+
     /* Projects */
     .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
     .project { border: var(--line); border-radius: 40px; padding: 24px 28px; }
     .project ul { margin: 10px 0 0; padding-left: 20px; }
     .project li { margin-bottom: 6px; }
     @media (max-width: 800px) { .projects { grid-template-columns: 1fr; } }
- 
+
     /* Contact */
     .contact { text-align: center; }
     .contact p { margin-bottom: 8px; }
- 
+
     footer { text-align: center; padding: 30px 5% 40px; font-size: .85rem; color: var(--mauve); }
- 
+
     @media (max-width: 800px) {
       .bio { flex-direction: column-reverse; }
       .resume { grid-template-columns: 1fr; gap: 20px; }
@@ -150,22 +153,23 @@
   </style>
 </head>
 <body>
- 
+
   <nav aria-label="Main">
     <a class="pill" href="#about">About</a>
-    <a class="pill" href="#projects">Projects</a>
     <a class="pill" href="#education">Education</a>
     <a class="pill" href="#experience">Experience</a>
+    <a class="pill" href="#clubs">Clubs</a>
+    <a class="pill" href="#projects">Projects</a>
     <a class="pill" href="#skills">Skills</a>
     <a class="pill" href="#contact">Contact</a>
   </nav>
- 
+
   <header class="hero">
     <section>
       <img src="images/banner.png" alt="Ren's portfolio banner">
     </section>
   </header>
- 
+
   <main>
     <section id="about">
       <div class="bio">
@@ -176,7 +180,83 @@
         <img src="images/profile.png" alt="Portrait of Ren">
       </div>
     </section>
- 
+
+    
+
+    <section>
+      <div id="education" class="entry">
+          <h2>Education</h2>
+          <h3>B.S. in Management Information Systems &amp; Supply Chain Management</h3>
+          <p class="org">Rutgers Business School – Newark</p>
+          <p>Relevant coursework: Database Management, System Analysis &amp; Design, Data Warehousing, Business Research Methods</p>
+          <p style="margin-top:10px"><span class="dates">2023 – Expected May 2027</span></p>
+        </div>
+
+      <h2 id="experience">Experience</h2>
+        <div class="exp-grid">
+
+        <article class="entry">
+          <p class="role">Operations Crew Member</p>
+          <p class="org">Rutgers University–Newark, Reservations &amp; Special Events</p>
+          <ul>
+            <li>Coordinated setup and breakdown for multiple campus events, getting spaces ready on time for groups of 50+ attendees.</li>
+            <li>Operated audio-visual equipment for event hosts and attendees, keeping presentations smooth and technical disruptions low.</li>
+            <li>Organized materials and maintained event spaces to keep them safe, professional, and welcoming.</li>
+          </ul>
+          <span class="dates">March 2026 – Present</span>
+        </article>
+
+        <article class="entry">
+          <p class="role">Business Development</p>
+          <p class="org">Next Play (Remote)</p>
+          <ul>
+            <li>Ran usability testing across 5+ digital product features, including chatbots, avatars, and gamified experiences, and identified friction points that informed UX refinements and feature prioritization.</li>
+            <li>Turned qualitative survey feedback into structured insight reports used by product and marketing teams to guide iteration.</li>
+            <li>Flagged recurring usability issues and proposed improvements that made key user journeys clearer.</li>
+          </ul>
+          <span class="dates">Sept 2025 – March 2026</span>
+        </article>
+        </div>
+    </section>
+
+    <section id="clubs">
+      <h2>Clubs &amp; Leadership</h2>
+      <div class="exp-grid">
+        <article class="entry">
+          <p class="role">Vice President</p>
+          <p class="org">Rutgers Undergraduate Women in Business</p>
+          <ul>
+            <li>Coordinated operations across multiple committees to run campus events supporting 100+ member engagement.</li>
+            <li>Represented the organization at Student Involvement Fairs and university events, using outreach strategies that improved visibility.</li>
+            <li>Built 3 partnerships with other campus clubs to boost club visibility.</li>
+            <li>Set up structured planning processes that helped the executive board and committees coordinate and run events more effectively.</li>
+          </ul>
+          <span class="dates">Apr 2025 – May 2026</span>
+        </article>
+
+        <article class="entry">
+          <p class="role">Vice President of Member Relations</p>
+          <p class="org">Rutgers Undergraduate Women in Business</p>
+          <ul>
+            <li>Led the Member Relations Committee and streamlined event planning, saving time and cutting event costs by 15% to prevent overspending.</li>
+            <li>Designed presentations in Canva that raised the quality of events and drove member engagement.</li>
+            <li>Led brainstorming sessions that produced new event ideas, like Pitch Roulette, a fast-paced business game that challenged members to think creatively under pressure.</li>
+          </ul>
+          <span class="dates">May 2024 – Apr 2025</span>
+        </article>
+
+        <article class="entry">
+          <p class="role">Graphics &amp; IT Committee Member</p>
+          <p class="org">Rutgers Undergraduate Women in Business</p>
+          <ul>
+            <li>Created 20+ visuals and marketing assets, increasing engagement and event attendance by 30%.</li>
+            <li>Worked with a team of 5 on digital marketing strategies that grew social media followers and interaction by 40%.</li>
+          </ul>
+          <span class="dates">Feb 2024 – May 2024</span>
+        </article>
+      </div>
+    </section>
+
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects">
@@ -198,54 +278,9 @@
         </article>
       </div>
     </section>
- 
-    <section class="resume">
+
+    <section id="skills" class="resume">
       <div>
-        <div id="education" class="entry">
-          <h2>Education</h2>
-          <h3>B.S. in Management Information Systems &amp; Supply Chain Management</h3>
-          <p class="org">Rutgers Business School – Newark</p>
-          <p>Relevant coursework: Database Management, System Analysis &amp; Design, Data Warehousing, Business Research Methods</p>
-          <p style="margin-top:10px"><span class="dates">2023 – Expected May 2027</span></p>
-        </div>
- 
-        <h2 id="experience">Experience</h2>
- 
-        <article class="entry">
-          <p class="role">Operations Crew Member</p>
-          <p class="org">Rutgers University–Newark, Reservations &amp; Special Events</p>
-          <ul>
-            <li>Coordinated setup and breakdown for multiple campus events, getting spaces ready on time for groups of 50+ attendees.</li>
-            <li>Operated audio-visual equipment for event hosts and attendees, keeping presentations smooth and technical disruptions low.</li>
-            <li>Organized materials and maintained event spaces to keep them safe, professional, and welcoming.</li>
-          </ul>
-          <span class="dates">March 2026 – Present</span>
-        </article>
- 
-        <article class="entry">
-          <p class="role">Business Development</p>
-          <p class="org">Next Play (Remote)</p>
-          <ul>
-            <li>Ran usability testing across 5+ digital product features, including chatbots, avatars, and gamified experiences, and identified friction points that informed UX refinements and feature prioritization.</li>
-            <li>Turned qualitative survey feedback into structured insight reports used by product and marketing teams to guide iteration.</li>
-            <li>Flagged recurring usability issues and proposed improvements that made key user journeys clearer.</li>
-          </ul>
-          <span class="dates">Sept 2025 – March 2026</span>
-        </article>
- 
-        <article class="entry">
-          <p class="role">Vice President</p>
-          <p class="org">Rutgers Undergraduate Women in Business</p>
-          <ul>
-            <li>Coordinated operations across multiple committees to run campus events supporting 100+ member engagement.</li>
-            <li>Developed outreach strategies that improved participation visibility at involvement fairs and networking initiatives.</li>
-            <li>Set up structured planning processes that helped the executive board and committees coordinate and run events more effectively.</li>
-          </ul>
-          <span class="dates">May 2025 – May 2026</span>
-        </article>
-      </div>
- 
-      <div id="skills">
         <h2>Skills</h2>
         <div class="skill-list">
           <span class="skill">Web Design</span>
@@ -257,14 +292,14 @@
           <span class="skill">Project Coordination</span>
           <span class="skill">Problem Solving</span>
         </div>
- 
-        <div class="softwares">
+      </div>
+
+      <div class="softwares">
           <h2>Software</h2>
           <img src="images/software-logos.png" alt="Logos of the software I use">
-        </div>
       </div>
     </section>
- 
+
     <section id="contact" class="contact">
       <h2>Let's connect</h2>
       
@@ -272,11 +307,10 @@
       <p><a href="https://www.linkedin.com/in/renekabrutus/" target="_blank" rel="noopener">LinkedIn</a></p>
     </section>
   </main>
- 
+
   <footer>
     <p>&copy; 2026 Ren. Rutgers Business School – Newark.</p>
   </footer>
- 
+
 </body>
 </html>
- 
